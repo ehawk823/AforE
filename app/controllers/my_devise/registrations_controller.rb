@@ -3,6 +3,8 @@ class MyDevise::RegistrationsController < Devise::RegistrationsController
   def create
     super
     @user.designation = params[:user][:designation]
-    binding.pry
+    @user.save
   end
+
+
 end
