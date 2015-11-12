@@ -1,0 +1,12 @@
+<%= form_for @company do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %><br />
+
+  <%= f.label :description %>:
+  <%= f.text_field :description %><br />
+
+  <%= f.label :challenges %>:
+  <%= f.text_field :challenges %><br />
+
+  <%= f.submit %>
+<% end %>
