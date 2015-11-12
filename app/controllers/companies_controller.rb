@@ -5,12 +5,14 @@ class CompaniesController < ApplicationController
   end
 
   def create
-    Company.create(params[:company])
+    new_company = Company.create(company_params)
+    new_company.save
+    redirect_to '/'
   end
 
   private
 
-  def person_params
+  def company_params
     params.require(:company).permit(:name, :description, :challenges)
   end
 

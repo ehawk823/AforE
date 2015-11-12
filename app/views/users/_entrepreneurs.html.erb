@@ -1,4 +1,6 @@
-<% if current_user.location == nil %>
+<% binding.pry %>
+<% if current_user[:location] == nil %>
   <%= render 'users/form' %>
 <% else %>
+  <%= render 'users/entbase' %>
 <% end %>
