@@ -10,7 +10,15 @@ class UsersController < ApplicationController
     current_user[:location] = params[:user][:location]
     current_user[:title] = params[:user][:title]
     current_user.save
-    redirect_to '/companies/new'
+    if current_user.designation == "entrepreneur"
+      redirect_to '/companies/new'
+    elsif current_user.designation == "lawyer"
+      redirect_to '/'
+    else redirect_to '/'
+    end
   end
+
+
+
 
 end
