@@ -1,1 +1,5 @@
-<p>law</p>
+<% if current_user[:location] == nil %>
+  <%= render 'users/form' %>
+<% else %>
+  <%= render 'users/formlaw' %>
+<% end %>
