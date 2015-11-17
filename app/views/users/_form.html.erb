@@ -1,0 +1,14 @@
+<p> This is the page for entrepreneurs and lawyers to include some basic info about themselves </p>
+
+<%= form_for current_user do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %><br />
+
+  <%= f.label :location %>:
+  <%= f.text_field :location %><br />
+
+  <%= f.label :title %>:
+  <%= f.text_field :title %><br />
+
+  <%= f.submit %>
+<% end %>
