@@ -1,2 +1,1 @@
-AforE
-An upcoming project.
+AforE - Coming Soon.
