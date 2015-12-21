@@ -39,11 +39,106 @@
 This is the basic profile page for both lawyers and entrepreneurs.
 
 
-Name: <%= current_user[:name] %>
-<br>
-Location: <%= current_user[:location] %>
-<br>
-Title: <%= current_user[:title] %>
+<style type="text/css">
+#ProfilePage
+{
+    /* Move it off the top of the page, then centre it horizontally */
+    margin: 50px auto;
+    width: 635px;
+
+
+}
+
+#LeftCol
+{
+    /* Move it to the left */
+    float: left;
+
+    width: 200px;
+    text-align: center;
+
+    /* Move it away from the content */
+    margin-right: 20px;
+
+
+}
+
+#Photo
+{
+    /* Width and height of photo container */
+    width: 200px;
+    height: 200px;
+
+/* For visibility. Delete me */
+
+}
+
+#PhotoOptions
+{
+    text-align: center;
+    width: 200px;
+
+
+}
+
+#Info
+{
+    width: 400px;
+    text-align: left;
+
+    /* Move it to the right */
+    float: right;
+
+/* For visibility. Delete me */
+
+}
+
+#Info strong
+{
+    /* Give it a width */
+    display: inline-block;
+    width: 100px;
+
+
+}
+
+#Info span
+{
+    /* Give it a width */
+    display: inline-block;
+    width: 250px;
+
+
+}
+</style>
+
+<div id="ProfilePage">
+    <div id="LeftCol">
+        <div id="Photo"><%= image_tag "icon-user-default.png", size: "200"%></div>
+        <div id="ProfileOptions">
+        <%= link_to('Edit Profile', edit_user_path, {:style => 'color: #FFFFFF'})  %>
+        </div>
+    </div>
+
+    <div id="Info">
+        <p>
+            <strong>Name:</strong>
+            <span><%= current_user[:name] %></span>
+        </p>
+        <p>
+            <strong>Location:</strong>
+            <span><%= current_user[:location] %></span>
+        </p>
+        <p>
+            <strong>Title:</strong>
+            <span><%= current_user[:title] %></span>
+        </p>
+    </div>
+
+
+    <!-- Needed because other elements inside ProfilePage have floats -->
+    <div style="clear:both"></div>
+</div>
 
 <br>
 </br>

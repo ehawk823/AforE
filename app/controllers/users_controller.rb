@@ -11,9 +11,9 @@ class UsersController < ApplicationController
     current_user[:title] = params[:user][:title]
     current_user.save
     if current_user.designation == "entrepreneur"
-      redirect_to '/companies/new'
+      redirect_to current_user
     elsif current_user.designation == "lawyer"
-      redirect_to '/'
+      redirect_to current_user
     else redirect_to '/'
     end
   end
