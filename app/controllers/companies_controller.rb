@@ -7,7 +7,7 @@ class CompaniesController < ApplicationController
   def create
     new_company = Company.create(company_params)
     new_company.save
-    redirect_to '/'
+    redirect_to current_user
   end
 
   private
