@@ -133,6 +133,26 @@ This is the basic profile page for both lawyers and entrepreneurs.
             <strong>Title:</strong>
             <span><%= current_user[:title] %></span>
         </p>
+        <p>
+            <strong>Specialties:</strong>
+          <br>
+            <ul>
+            <span><% current_user.specialties.each do |specialty| %>
+                    <li><%= specialty.name %></li>
+                  <% end %>
+            </span>
+          </ul>
+        </p>
+        <p>
+            <strong>Interests:</strong>
+          <br>
+            <ul>
+            <span><% current_user.interests.each do |interest| %>
+                    <li><%= interest.name %></li>
+                  <% end %>
+            </span>
+          </ul>
+        </p>
     </div>
 
 

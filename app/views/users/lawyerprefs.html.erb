@@ -35,44 +35,15 @@
 <%= form_for current_user do |f| %>
   <h2>Specialties</h2>
   <p> Please select a few areas/specialties where have experience and could support startups </p>
-  <%= f.label "Incorporation" %>
-  <%= f.check_box :specialties %> <br />
-  <%= f.label "IP" %>
-  <%= f.check_box :specialties %> <br />
-  <%= f.label "Founder's Stock" %> 
-  <%= f.check_box :specialties %> <br />
-  <%= f.submit %>
-<% end %>
-
-<h2>Industries</h2>
-<p> Please select any industries that you are interested in, so that we can connect you with relevent companies </p>
-<center>
-<%= form_for current_user do |f| %>
-  <%= f.label :name %>:
-</br>
-  <font color="black">
-  <%= f.text_field :name, value: current_user[:name] %><br />
-  </font>
-  </br>
-
-  <%= f.label :location %>:
-  </br>
-  <font color="black">
-  <%= f.text_field :location, value: current_user[:location] %><br />
-  </font>
-  </br>
-
-  <%= f.label :title %>:
-  </br>
-  <font color="black">
-  <%= f.text_field :title, value: current_user[:title] %><br />
-  </font>
-</br>
+  <%= f.collection_check_boxes :specialties, Specialty.all, :id, :name %>
+  <h2>Industries</h2>
+  <p> Please select any industries that you are interested in, so that we can connect you with relevent companies </p>
+  <%= f.collection_check_boxes :interests, Interest.all, :id, :name %>
   <font color="black">
   <%= f.submit %>
   </font>
 <% end %>
-</center>
+
 <br>
 </br>
 </div>

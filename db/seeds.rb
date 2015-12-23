@@ -3,5 +3,9 @@
 #
 # Examples:
 #
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+Specialty.create( name: 'Incorporation' )
+Specialty.create( name: 'Founder Stock' )
+Specialty.create( name: 'Litigation' )
+Interest.create(name: 'Med Tech')
+Interest.create(name: 'Industrials')
+Interest.create(name: 'VR/AR')
