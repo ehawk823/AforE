@@ -14,7 +14,6 @@ class UsersController < ApplicationController
     if interests != nil
       current_user.assign_interests(interests)
     end
-    binding.pry
     if current_user[:name] == nil
       current_user[:name] = params[:user][:name]
       current_user[:location] = params[:user][:location]

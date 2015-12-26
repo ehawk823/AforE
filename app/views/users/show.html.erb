@@ -133,6 +133,7 @@ This is the basic profile page for both lawyers and entrepreneurs.
             <strong>Title:</strong>
             <span><%= current_user[:title] %></span>
         </p>
+        <% if current_user.designation == "lawyer" %>
         <p>
             <strong>Specialties:</strong>
           <br>
@@ -153,6 +154,18 @@ This is the basic profile page for both lawyers and entrepreneurs.
             </span>
           </ul>
         </p>
+        <% end %>
+        <% if current_user.designation == "entrepreneur" %>
+        <p>
+            <strong>Companies:</strong>
+          <br>
+            <ul>
+            <span>
+              Company Placeholder for Entrepreneurs
+            </span>
+          </ul>
+        </p>
+        <% end %>
     </div>
 
 
