@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   attr_accessor :name, :title, :location, :top_specialties
   has_many :interests
   has_many :specialties
+  mount_uploader :avatar, AvatarUploader
 
 
   def assign_specialties(specialties)

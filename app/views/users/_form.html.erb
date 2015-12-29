@@ -35,7 +35,12 @@
 
 <p> This is the page for entrepreneurs and lawyers to include some basic info about themselves </p>
 <center>
-<%= form_for current_user do |f| %>
+
+<%= form_for current_user, :html => {:multipart => true} do |f| %>
+  My Avatar
+  <%= f.file_field :avatar %>
+
+
   <%= f.label :name %>:
 </br>
   <font color="black">
