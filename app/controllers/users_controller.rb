@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   end
 
   def update
+    binding.pry
     specialties = params["user"]["specialties"]
     interests = params["user"]["interests"]
     if specialties != nil
@@ -18,6 +19,7 @@ class UsersController < ApplicationController
       current_user[:name] = params[:user][:name]
       current_user[:location] = params[:user][:location]
       current_user[:title] = params[:user][:title]
+      current_user.avatar = params[:user][:avatar]
     end
     current_user.save
     if current_user.designation == "entrepreneur"
