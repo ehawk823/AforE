@@ -114,7 +114,7 @@ This is the basic profile page for both lawyers and entrepreneurs.
 
 <div id="ProfilePage">
     <div id="LeftCol">
-        <div id="Photo"><%= image_tag "icon-user-default.png", size: "200"%></div>
+        <div id="Photo"><%= image_tag(current_user.avatar.small_avatar, size: "200")%></div>
         <div id="ProfileOptions">
         <%= link_to('Edit Profile', edit_user_path, {:style => 'color: #FFFFFF'})  %>
         </div>
