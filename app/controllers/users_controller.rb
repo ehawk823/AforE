@@ -6,7 +6,6 @@ class UsersController < ApplicationController
   end
 
   def update
-    binding.pry
     specialties = params["user"]["specialties"]
     interests = params["user"]["interests"]
     if specialties != nil
