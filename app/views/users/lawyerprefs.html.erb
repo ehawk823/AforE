@@ -40,7 +40,7 @@
   <p> Please select any industries that you are interested in, so that we can connect you with relevent companies </p>
   <%= f.collection_check_boxes :interests, Interest.all, :id, :name %>
   <font color="black">
-  <%= f.submit %>
+  <%= f.submit "Submit" %>
   </font>
 <% end %>
 
